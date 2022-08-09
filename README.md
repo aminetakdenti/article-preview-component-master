@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://aminetakdenti.github.io/article-preview-component-master/)
+- Live Site URL: [https://your-live-site-url.com](https://github.com/aminetakdenti/article-preview-component-master.git)
 
 ## My process
 
