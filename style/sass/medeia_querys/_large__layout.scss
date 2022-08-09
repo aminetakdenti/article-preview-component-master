@@ -1,0 +1,71 @@
+// Import Variables
+@use "./sass/variables/main-color" as *;
+
+// Import Mixin
+@use "../helpers/mixin" as *;
+
+@include medea(large) {
+  p {
+    font-size: 18px;
+  }
+
+  .article {
+    max-width: 70%;
+    flex-direction: row;
+    overflow: initial;
+
+    > .info {
+      padding: 30px 35px;
+      > .content {
+        h2 {
+          font-size: 25px;
+        }
+
+        p {
+          line-height: 1.8;
+        }
+      }
+    }
+
+    .avatar {
+      margin-top: 20px;
+
+      > .info > img {
+        height: 50px;
+        width: 50px;
+      }
+
+      .share {
+        position: relative;
+
+        > .box {
+          display: none;
+          top: -200%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: fit-content;
+          height: fit-content;
+          padding: 20px;
+          border-radius: 15px;
+
+          &::after {
+            @include bottom-arrow($Very-Dark-Grayish-Blue);
+          }
+
+          .sociale {
+            display: flex;
+
+            img {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+
+        .box.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}

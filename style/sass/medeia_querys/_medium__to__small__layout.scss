@@ -1,0 +1,116 @@
+// Import main Color
+@use "../variables/main-color" as *;
+
+.article {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 30px 0 hsl(212, 23%, 79%);
+  overflow: hidden;
+
+  > {
+    .image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .info {
+      padding: 20px;
+
+      .content {
+        h2 {
+          color: $Very-Dark-Grayish-Blue;
+          font-weight: 700;
+        }
+
+        p {
+          line-height: 1.6;
+          color: $Desaturated-Dark-Blue;
+          margin: 15px auto;
+        }
+      }
+    }
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .user > {
+        p:first-child {
+          font-weight: 700;
+          color: $Very-Dark-Grayish-Blue;
+        }
+
+        p:last-child {
+          color: $Grayish-Blue;
+        }
+      }
+    }
+    .share {
+      > img {
+        box-sizing: initial;
+        height: 20px;
+        width: 20px;
+        padding: 9px;
+        transform: translateY(9px);
+        border-radius: 50%;
+        background-color: hsl(210deg, 46%, 95%);
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+      }
+
+      img.active {
+        color: $Light-Grayish-Blue;
+        background-color: $Grayish-Blue;
+      }
+
+      .box {
+        position: absolute;
+        width: 360px;
+        height: calc(100% + 20px);
+        display: flex;
+        padding-left: 20px;
+        padding-top: 20px;
+        background-color: $Very-Dark-Grayish-Blue;
+        left: -20px;
+        bottom: -200%;
+        transition: 0.5s ease;
+
+        p {
+          letter-spacing: 5px;
+          font-weight: 700;
+          font-size: 16px;
+          color: $Desaturated-Dark-Blue;
+        }
+
+        .sociale img {
+          margin-left: 12px;
+        }
+      }
+
+      .box.active {
+        bottom: -20px;
+      }
+    }
+  }
+}

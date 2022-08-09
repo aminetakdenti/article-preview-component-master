@@ -1,0 +1,26 @@
+// Mixin for center all elemnt inside a fill
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Medea Query Mixin
+@mixin medea($device) {
+  @if ($device == large) {
+    @media (min-width: 1140px) {
+      @content;
+    }
+  }
+}
+
+// Arrow Mixin
+@mixin bottom-arrow($color) {
+  content: "";
+  position: absolute;
+  border: 15px solid transparent;
+  border-top-color: $color;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+}

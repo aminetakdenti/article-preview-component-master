@@ -1,0 +1,30 @@
+// Import Variables
+@use "./sass/variables/main-color" as *;
+
+// Import MEdeium To Small Medea
+@use "./sass/medeia_querys/medium__to__small__layout" as *;
+
+// Import Larg Medea
+@use "./sass/medeia_querys/large__layout" as *;
+
+// Import Mixin
+@use "./sass/helpers/mixin" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  min-height: 100vh;
+  padding: {
+    top: 50px;
+    bottom: 50px;
+  }
+  @include center;
+  background-color: $Light-Grayish-Blue;
+}
